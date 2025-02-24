@@ -4,9 +4,9 @@
 
 using namespace std;
 
-const double PI = 3.14159265358979323846;
+const double PI = 3.141592;
 
-// Task 1: Shapes
+
 class Shape {
 public:
     virtual double CalculateArea() = 0;
@@ -44,7 +44,6 @@ public:
     }
 };
 
-// Task 2: Zoo Animals
 class Animal {
 public:
     virtual void MakeSound() = 0;
@@ -70,7 +69,6 @@ public:
     void PrintInfo() override { cout << "this is a bird" << endl; }
 };
 
-// Task 3: Bank Accounts
 class Account {
 protected:
     double balance;
@@ -114,7 +112,6 @@ public:
 };
 
 int main() {
-    // Task 1: Shapes
     Shape* shapes[3];
     shapes[0] = new Rectangle(5, 10);
     shapes[1] = new Circle(3);
@@ -124,7 +121,6 @@ int main() {
         delete shapes[i];
     }
 
-    // Task 2: Zoo Animals
     Animal* zoo[3];
     zoo[0] = new Dog();
     zoo[1] = new Cat();
@@ -135,7 +131,6 @@ int main() {
         delete zoo[i];
     }
 
-    // Task 3: Bank Accounts
     Account* accounts[3];
     accounts[0] = new SavingsAccount(1000);
     accounts[1] = new CheckingAccount(1000);
@@ -147,6 +142,4 @@ int main() {
         accounts[i]->Print();
         delete accounts[i];
     }
-
-    return 0;
 }
